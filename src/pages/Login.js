@@ -40,7 +40,6 @@ const Login = () => {
         axios
           .post("/user/login", { values })
           .then((res) => {
-            console.log(res);
             if (res.status === 201) {
               setUser(res.data);
               localStorage.setItem("guvi-user", JSON.stringify(res.data));
@@ -49,7 +48,7 @@ const Login = () => {
               toast.error(res.data);
             }
           })
-          .catch((error) => toast.error(error.response.data));
+          .catch((error) => toast.error(error?.response?.data));
       },
     });
 

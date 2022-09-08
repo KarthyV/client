@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = "http://localhost:8000";
+const URL = "https://guvi-task-server.herokuapp.com";
 
 export default axios.create({
   baseURL: URL,
